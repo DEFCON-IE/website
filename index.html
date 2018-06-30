@@ -1,0 +1,135 @@
+<html>
+<head>
+	<link href="favicon.ico" rel="icon" type="image/x-icon">
+	<title>DEFCON 353</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  font-weight: 300;
+  background: #15ace6;
+  background: linear-gradient(to bottom right, #075570 0%, #043a4e 50%, #031443 100%);
+  width: 100%;
+  height: 100%;
+}
+main {
+  margin: 0 auto;
+  padding: 80px 10px;
+  text-align: center;
+}
+.terminal {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 340px;
+  tex-align: left;
+  margin-top: 15px;
+  postion: relative;
+  border-radius: 10px;
+}
+.terminal header {
+  background-color: #E0E8F0;
+  height: 30px;
+  border-radius: 8px 8px 0 0;
+  padding-left: 10px;
+}
+.terminal .button {
+  width: 12px;
+  height: 12px;
+  margin: 10px 4px 0 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+.rb {background-color: #E75448}
+.gb {background-color: #3BB662}
+.yb {background-color: #E5C30F}
+.button {
+  float: left;
+  margin: 0 20px;
+}
+.terminal {
+  background-color: #0D1F2D;
+  color: #F4FAFF;
+  font-size: 11pt;
+}
+.link {
+  color: #9FEAF9;
+  cursor: pointer;
+}
+.link:hover {
+  color: darkturquoise;
+  text-decoration: underline;
+}
+#typed {
+  font-family: "Menlo", "Monaco", "Consolas", "Courier New", "Courier";
+  max-width: 600px;
+}
+pre {
+  padding: 0 5px;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* IE 5.5+ */
+}
+@-webkit-keyframes pulse {
+  0% {-webkit-transform: scale(1.0, 1.0)}
+  25% {-webkit-transform: scale(1.1, 1.1)}
+  50% {-webkit-transform: scale(1.2, 1.2)}
+  75% {-webkit-transform: scale(1.1, 1.1)}
+  100% {-webkit-transform: scale(1.0, 1.0)}
+}
+#heart {
+  animation-name: pulse;
+  animation-duration: 1000ms;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: inline;
+  height: 16px;
+  width: 16px;
+}
+	</style>
+	<script src="typed/lib/typed.js"></script>
+	<script>
+t = "^600\n\n";
+greet =
+	"\nHello World!"
++t+	"Greetings from Ireland, we are DEFCON 353!"
++t+ "A bunch of tech enthusiasts looking to have some fun with likeminded people."
++t+ "We have several meetups ahead, so keep an eye on our Twitter."
++t+ "Any questions, join our Discord server or tweet at us :)^300\n\n"
+;
+contact = "<span class='link' onclick='window.open(\"https://twitter.com/defcon353\")'>Twitter</span>     <span class='link' onclick='window.open(\"https://discord.gg/ggy8s7T\")'>Discord</span>\n\nMade with <img id='heart' src='heart.png'> by an alien";
+options = {
+	strings: [greet + contact],
+	typeSpeed: 30,
+	loop: false
+}
+$("document").ready(function(){
+	new Typed("#typed", options);
+});
+	</script>
+</head>
+<body>
+	<main>
+		<div class="terminal">
+			<header>
+				<div class="rb button"></div>
+				<div class="gb button"></div>
+				<div class="yb button"></div>
+			</header>
+			<div class="terminal">
+				<pre><span id="typed"></span></pre>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
